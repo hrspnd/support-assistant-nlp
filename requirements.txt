@@ -1,0 +1,6 @@
+# temporary file (possible libraries)
+numpy
+pandas
+scikit-learn
+transformers
+torch
