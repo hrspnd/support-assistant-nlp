@@ -2,8 +2,11 @@
 
 ## Development Team
 Bermudo, Jeanne Clarrise T.
+
 Magat, Maria Josephine M.
+
 Pineda, Mary Alexa Ysabelle V.
+
 Rebusa, Amber Kaia J.
 
 ## Overview
