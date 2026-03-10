@@ -1,5 +1,11 @@
 # Delivery Customer Support Assistant (NLP + RL)
 
+## Development Team
+Bermudo, Jeanne Clarrise T.
+Magat, Maria Josephine M.
+Pineda, Mary Alexa Ysabelle V.
+Rebusa, Amber Kaia J.
+
 ## Overview
 
 This project develops an AI-powered customer support assistant designed for delivery-related services. The system uses Natural Language Processing (NLP) to classify customer intents from delivery inquiries and applies Reinforcement Learning (RL) to optimize response selection for customer support interactions.
