@@ -1,5 +1,5 @@
 ---
-license: mit
+license: cdla-sharing-1.0
 library_name: transformers
 pipeline_tag: text-classification
 tags:
