@@ -1,6 +1,6 @@
-# temporary file (possible libraries)
-numpy
+datasets
 pandas
+transformers==4.40.0
+accelerate>=0.21.0
 scikit-learn
-transformers
 torch
