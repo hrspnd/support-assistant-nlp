@@ -45,24 +45,24 @@ The system will be evaluated using the following metrics:
 * **Task Success Rate**
 * **Cumulative Reward** for the reinforcement learning response policy
 
-# Ethical Considerations
+## Ethical Considerations
 
-## Risk of Incorrect Intent Classification
+### Risk of Incorrect Intent Classification
 Although the model achieved high validation accuracy, it may still incorrectly classify user messages. Misclassification may cause the chatbot to return irrelevant responses and delay issue resolution.
 
 To reduce this risk, the system should include fallback responses and escalation to a human support agent when the model confidence is low.
 
-## Limitations of Automated Customer Support
+### Limitations of Automated Customer Support
 Automated systems may fail to fully understand complex or ambiguous requests. Users expecting accurate assistance may become frustrated if the system cannot capture the full context of their problem.
 
 Therefore, the chatbot should complement human customer support rather than replace it.
 
-## Dataset Bias and Representativeness
+### Dataset Bias and Representativeness
 The dataset used for training contains templated or synthetic queries. These queries may not reflect the diversity of real customer language.
 
 Future work should include collecting more diverse datasets or incorporating real-world customer interactions.
 
-## Privacy and Sensitive Information
+### Privacy and Sensitive Information
 Customer support messages may contain sensitive information such as order numbers, addresses, or personal identifiers. Improper handling of this data may lead to privacy concerns.
 
 The system should avoid storing sensitive data unnecessarily and should anonymize stored conversation logs whenever possible.
