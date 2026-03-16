@@ -1,7 +1,7 @@
 # Delivery Customer Support Assistant (NLP + RL)
 
 ## Development Team
-Bermudo, Jeanne Clarrise T.
+Bermudo, Jeanne Clarisse T.
 
 Magat, Maria Josephine M.
 
