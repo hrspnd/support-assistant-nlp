@@ -73,4 +73,4 @@ The project setup is **currently incomplete** as development has not started yet
 
 ## Version
 
-v0.1 – Initial repository setup and project proposal.
+v0.9 – Initial repository setup and project proposal.
