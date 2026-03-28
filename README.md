@@ -1,5 +1,9 @@
 # Delivery Customer Support Assistant (NLP + RL)
 
+A hybrid customer support assistant that uses BERT and Text-CNN for intent classification, combined with a Multi-Armed Bandit (epsilon-greedy) for response selection.
+
+---
+
 ## Development Team
 Bermudo, Jeanne Clarisse T.
 
@@ -9,68 +13,113 @@ Pineda, Mary Alexa Ysabelle V.
 
 Rebusa, Amber Kaia J.
 
-## Overview
+---
 
-This project develops an AI-powered customer support assistant designed for delivery-related services. The system uses Natural Language Processing (NLP) to classify customer intents from delivery inquiries and applies Reinforcement Learning (RL) to optimize response selection for customer support interactions.
+## Prerequisites
 
-The assistant aims to help automate responses to common delivery issues such as order tracking, delivery delays, address updates, and missing packages.
+Make sure you have **Python 3.10+** installed.
 
-## Task
+- [Download Python](https://www.python.org/downloads/) — pip is included by default
+- To verify:
+```bash
+  python --version
+  python -m pip --version
+```
 
-The main task of this project is **intent classification and response selection** for delivery-related customer queries. The system analyzes a user's message, determines the intent of the request, and selects the most appropriate response using a learned policy.
+---
 
-## Minimum Viable Product (MVP)
+## Installation
 
-The initial system will implement and compare the following intent classification models:
+### 1. Install PyTorch
 
-* **Naive Bayes**
-* **Support Vector Machine (SVM)**
-* **BERT**
+**If you have an NVIDIA GPU (recommended):**
+```bash
+python -m pip install torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+```
 
-The predicted intent will then trigger a predefined rule-based response. Reinforcement learning or bandit-based policies will be explored to improve response selection over time.
+**CPU only:**
+```bash
+python -m pip install torch
+```
 
-Example intents may include:
+> To check if your machine has a CUDA-compatible GPU, run `nvidia-smi` in your terminal.
+> If the command is not found, use the CPU version.
 
-* Order status inquiry
-* Delivery delay report
-* Address change request
-* Missing package report
+### 2. Install dependencies
+```bash
+python -m pip install -r requirements.txt
+```
 
-## Evaluation Metrics
+---
 
-The system will be evaluated using the following metrics:
+## Project Structure
 
-* **Intent Classification F1 Score**
-* **Precision and Recall**
-* **Task Success Rate**
-* **Cumulative Reward** for the reinforcement learning response policy
+Make sure your project follows this structure:
+```
+support-assistant-nlp/
+├── data/
+│   └── processed/
+│       └── intent_dataset.csv
+├── src/
+│   ├── train_bert.py
+│   ├── train_cnn.py
+│   ├── rl_agent.py
+│   └── data_pipeline.py
+├── experiments/
+│   └── rl_evaluation.py
+├── run_all.bat
+├── requirements.txt
+```
 
-## Ethical Considerations
+---
 
-### Risk of Incorrect Intent Classification
-Although the model achieved high validation accuracy, it may still incorrectly classify user messages. Misclassification may cause the chatbot to return irrelevant responses and delay issue resolution.
+## Dataset
 
-To reduce this risk, the system should include fallback responses and escalation to a human support agent when the model confidence is low.
+Ensure the dataset exists at:
+```
+data/processed/intent_dataset.csv
+```
 
-### Limitations of Automated Customer Support
-Automated systems may fail to fully understand complex or ambiguous requests. Users expecting accurate assistance may become frustrated if the system cannot capture the full context of their problem.
+If the dataset is missing, generate it using:
+```bash
+python src/data_pipeline.py
+```
 
-Therefore, the chatbot should complement human customer support rather than replace it.
+---
 
-### Dataset Bias and Representativeness
-The dataset used for training contains templated or synthetic queries. These queries may not reflect the diversity of real customer language.
+## Run the Project
 
-Future work should include collecting more diverse datasets or incorporating real-world customer interactions.
+To execute the full pipeline (training + evaluation), run this command from the project root directory:
+```bash
+run_all.bat
+```
 
-### Privacy and Sensitive Information
-Customer support messages may contain sensitive information such as order numbers, addresses, or personal identifiers. Improper handling of this data may lead to privacy concerns.
+---
 
-The system should avoid storing sensitive data unnecessarily and should anonymize stored conversation logs whenever possible.
+## Reproducibility
 
-## Setup
+The entire system can be reproduced using a single command:
+```bash
+run_all.bat
+```
 
-The project setup is **currently incomplete** as development has not started yet. Environment configuration, data download scripts, and execution instructions will be added in later milestones.
+This will:
+- Train the BERT model
+- Train the Text-CNN model
+- Run reinforcement learning evaluation
+- Generate performance graphs
 
-## Version
+---
 
-v0.9 – Initial repository setup and project proposal.
+## Notes
+
+- The system uses a BERT-based model as the primary classifier and Text-CNN for comparison.
+- A Multi-Armed Bandit (epsilon-greedy) is used for adaptive response selection.
+- Reinforcement learning evaluation is based on simulated rewards, not real user interaction.
+
+---
+
+## Disclaimer
+
+This project is developed for academic purposes only. The system may produce incorrect or incomplete responses and should not be used as a replacement for professional customer support.
+
