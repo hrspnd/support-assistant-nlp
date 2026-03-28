@@ -3,5 +3,5 @@ pandas
 transformers==4.40.0
 accelerate>=0.21.0
 scikit-learn
-torch
 matplotlib
+numpy
