@@ -4,6 +4,15 @@ A hybrid customer support assistant that uses BERT and Text-CNN for intent class
 
 ---
 
+## Development Team
+
+- Bermudo, Jeanne Clarisse T.
+- Magat, Maria Josephine M.
+- Pineda, Mary Alexa Ysabelle V.
+- Rebusa, Amber Kaia J.
+
+---
+
 ## Quick Start
 
 ```bash
