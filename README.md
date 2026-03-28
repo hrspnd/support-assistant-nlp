@@ -74,6 +74,9 @@ Make sure your project follows this structure:
 
 ```
 support-assistant-nlp/
+├── experiments
+│   └── f1_plot.py
+│   └── rl_evaluation.py
 ├── data/
 │   └── processed/
 │       └── intent_dataset.csv
