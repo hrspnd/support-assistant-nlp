@@ -89,7 +89,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 f1_scores = []
 
 # Training loop
-for epoch in range(10):
+for epoch in range(5):
     model.train()
     total_loss = 0
 
